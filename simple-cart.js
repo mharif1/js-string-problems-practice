@@ -5,7 +5,14 @@ const shoppingcart = [
     {name: 'pant',  price : 1500}   
 ]
 function totalCost(products){
-    for(let i = 0; i < shoppingcart.length; i++){
-        
+    let sum = 0;
+    for(let i = 0; i < products.length; i++){
+    const product= products[i]
+    sum = sum + product.price; 
+    // console.log(product)
+
     }
+    return sum;
 }
+const expence = totalCost(shoppingcart)
+console.log('total expence today', expence)
